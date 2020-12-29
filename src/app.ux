@@ -1,0 +1,33 @@
+<script>
+/**
+* 应用级别的配置，供所有页面公用
+*/
+import util from './util'
+
+export default {
+   onCreate() {
+    console.info('触发：Application onCreate')
+  },
+  onRequest() {
+    console.info('触发：Application onRequest')
+  },
+  onShow() {
+    console.info('触发：Application onShow')
+  },
+  onHide() {
+    console.info('触发：Application onHide')
+  },
+  onDestroy() {
+    console.info('触发：Application onDestroy')
+  },
+  onError() {
+    console.log('触发：Application onError')
+  },
+  onPageNotFound(params) {
+    const { uri = '' } = params
+    console.error('error uri', uri)
+  },
+  showMenu: util.showMenu,
+  createShortcut: util.createShortcut
+}
+</script>

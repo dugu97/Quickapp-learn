@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import router from '@system.router'
 export default {
   private: {
     text: '欢迎打开详情页'
@@ -25,6 +26,8 @@ export default {
   },
   onShow() {
     console.info(`触发：onShow`)
+    var stacks = router.getLength()
+    console.log('栈页面数量为：',stacks) 
   },
   onHide() {
     console.info(`触发：onHide`)
@@ -34,6 +37,12 @@ export default {
   },
   onBackPress() {
     console.info(`触发：onBackPress`)
+    router.back()
+    return true
+    // router.back ({
+    //   // uri: 'hap://app/com.example.demo/DemoDetail' //需要真机
+    //   uri: '/DemoDetail'
+    // })
   }
 }
 </script>

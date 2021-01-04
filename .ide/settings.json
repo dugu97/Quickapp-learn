@@ -16,5 +16,9 @@
             "action": "org.hapjs.debugger.action.MAIN"
         },
         "apkDir": "C:\\Users\\16099\\AppData\\Roaming\\QuickAppIDE\\Apks\\quickapp-apk"
+    },
+    "hap-devtools.mock": {
+        "mockEnable": false,
+        "rules": []
     }
 }

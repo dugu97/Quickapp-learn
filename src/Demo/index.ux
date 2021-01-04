@@ -26,6 +26,8 @@ export default {
     })
     //打印点击该按钮时的点击坐标x（相对于整个页面）
     console.log($evt.pageX)
+    var stacks = router.getLength()
+    console.log('栈页面数量为：',stacks) 
   },
   
   changeTitle() {

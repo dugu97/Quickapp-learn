@@ -37,6 +37,7 @@
 </template>
 
 <script>
+  const app = require('@system.app')
 /**
  * 默认的菜单页(可自定义)
  * name默认为manifest文件中的name字段
@@ -50,14 +51,22 @@ export default {
     icon: null
   },
   private: {
+    // name: null,
+    // icon: null,
     desc: '即点即用，让你省去下载安装的步骤，立即使用各类服务',
     serviceType: '工具类',
     subjectInfo: 'xxx有限公司',
-    copyright: ''
+    copyright: '版权信息'
   },
   onInit () {
     // 设置标题栏
+    // this.name = app.getInfo().name
+    // this.icon = app.getInfo().icon
     this.$page.setTitleBar({ text: this.name })
+    console.log(this)
+  },
+  onShow() {
+    console.log(JSON.stringify(app.getInfo().name))
   },
   createShortcut () {
     // 创建快捷方式
